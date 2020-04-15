@@ -1,0 +1,217 @@
+{
+  "info": {
+    "_postman_id": "5d161540-0eb6-4485-9cd8-41d12649647f",
+    "name": "nestjs-samples",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tasks: Get Tasks",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvbzEyMyIsImlhdCI6MTU4NjkwMzQ5NiwiZXhwIjoxNTg2OTA3MDk2fQ.0jP3wVkLXJeRq95n6sOv0ku0xA0lUCF-DH0C1EZz3L4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks: Get Tasks with Filters",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks?status=OPEN&search=is",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks"],
+          "query": [
+            {
+              "key": "status",
+              "value": "OPEN"
+            },
+            {
+              "key": "search",
+              "value": "is"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks: Get Task by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "26ffc1c5-c37c-4599-a003-d30c20045285",
+              "description": "Fetch the ID for example by calling CreateTask"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks: Create Task",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvbzEyMyIsImlhdCI6MTU4NjkwMzQ5NiwiZXhwIjoxNTg2OTA3MDk2fQ.0jP3wVkLXJeRq95n6sOv0ku0xA0lUCF-DH0C1EZz3L4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"title\": \"Si\",\n\t\"description\": \"Kerem\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks: Delete Task",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks", ":id"],
+          "variable": [
+            {
+              "description": "Fetch the ID for example by calling CreateTask",
+              "key": "id",
+              "value": "7b67d15c-471e-4958-b780-a7779f9f63e2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks: Update Task",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"status\": \"IN_PROGRESS\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks/:id/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks", ":id", "status"],
+          "variable": [
+            {
+              "description": "Fetch the ID for example by calling CreateTask",
+              "key": "id",
+              "value": "d2d14ed5-af22-465b-b0d2-d07d554fb26f"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth: Sign Up",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"Max Mustermann\",\n\t\"password\": \"FooBar1234!\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth: Sign In",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"Max Mustermann\",\n\t\"password\": \"FooBar1234!\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/signin",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["auth", "signin"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
