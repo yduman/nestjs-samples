@@ -15,7 +15,7 @@ This repo contains source code for several use cases utilizing the [NestJS](http
 
 ### gql-mongo
 
-- Example project for interacting with GraphQL and MongoDB
+- Example project for interacting with [GraphQL](https://graphql.org/) and [MongoDB](https://www.mongodb.com/)
 - Install [Robo3T](https://robomongo.org/download) in order to interact with MongoDB.
 - ```console
   $ # Create MongoDB container and start application
