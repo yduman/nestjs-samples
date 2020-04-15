@@ -25,3 +25,7 @@ This repo contains source code for several use cases utilizing the [NestJS](http
   $ docker run --name mongo -p 27017:27017 -d mongo
   ```
 - Install [Robo3T](https://robomongo.org/download) in order to interact with MongoDB.
+
+### websockets
+
+- Example project to demonstrate communication via websockets using [socket.io](https://socket.io/) under the hood
